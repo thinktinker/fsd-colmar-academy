@@ -2,6 +2,32 @@
 
 /* Reset CSS */
 /* Universal selector (*) targets every element (regardless tag, class, ID) */
+*{
+    margin: 0;
+    padding: 0;
+    outline: 1px dashed #000;
+}
+
+html{
+    font-size: 16px;        /* 1 rem used on the page == 16px  */
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: [full-start] 0.6fr [center-end center-start] 0.4fr [full-end];
+    grid-template-rows: repeat(6, min-content);
+}
 
 /* TODO */
 
@@ -9,15 +35,96 @@
 /** ************************ **/
 
 /* Set up the navbar for the desktop */
+nav{
+    display: flex;
+    grid-column: full-start / full-end;
+    background-color: #fff;
+    justify-content: space-between;
+    height: 4rem;
+}
 
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li{
+    align-content: center;
+    padding-right: 1rem;
+}
+
+nav ul li:last-child{
+    padding-right: 1.5rem;
+}
+
+nav ul li a{
+    font-size: 0.75rem;
+}
+
+nav > a{
+    display: flex;
+    align-items: center;
+}
 
 /* Set up logo styles */
+.logo{
+    height: 3rem;
+    margin-left: 1.5rem;
+}
 
+.logoname{
+    text-transform: uppercase;
+    line-height: 2rem;
+}
+
+.logoname-bold{
+    font-weight: bold;
+    color: #484848;
+}
+
+.logoname-light{
+    font-weight: lighter;
+    color: #aaa;
+}
 
 /* Set up navigation links' styles */
 
 
 /* Set up header area */
+header{
+    background-color: #d8d8d8;
+    display: flex;
+}
+
+header img{
+    width: 100%;
+    margin: 2rem 1.5rem;
+    /* TODO: to center hte image within header */
+}
+
+header > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1.5rem;
+}
+
+header div > h1{
+    font-size: xx-large;
+}
+
+header div > h2{
+    font-size: large;
+}
+
+header div > a{
+    display: block;
+    width: 100%;
+    background-color: #484848;
+    color: white;
+    text-align: center;
+    padding: 0.5rem 0; /* top-bottom (0.5rem) left-right (0) */
+}
 
 
 /* hover effect for call to action link */
