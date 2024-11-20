@@ -5,7 +5,7 @@
 *{
     margin: 0;
     padding: 0;
-    outline: 1px dashed #000;
+    /* outline: 1px dashed #000; */
 }
 
 html{
@@ -92,21 +92,26 @@ nav > a{
 
 /* Set up header area */
 header{
-    background-color: #d8d8d8;
-    display: flex;
+    display: flex;                  /* Enable flexbox layout  */
+    align-items: center;            /* Centers content vertically */
+    justify-content: center;        /* Center content horizontally */
+    background-color: #d8d8d8;    /* Set the bkgnd colour */  
 }
 
-header img{
-    width: 100%;
-    margin: 2rem 1.5rem;
-    /* TODO: to center hte image within header */
+.imgcontainer{
+    padding: 2rem 1.5rem;           /* Render padding of the containter as required */
+}
+
+header > img{
+    max-width: 100%;                /* Set the max width img can take */
+    height: auto;                   /* Set img to maintain proportionality - aspect ratio*/
 }
 
 header > div{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 1.5rem;
+    flex-direction: column;         /* Set content in a single column*/
+    justify-content: space-evenly;  /* Center content horizontally */
+    height: 18rem;                  /* Adjust desired height of container */
 }
 
 header div > h1{
@@ -123,7 +128,7 @@ header div > a{
     background-color: #484848;
     color: white;
     text-align: center;
-    padding: 0.5rem 0; /* top-bottom (0.5rem) left-right (0) */
+    padding: 0.5rem 0;              /* top-bottom (0.5rem) left-right (0) */
 }
 
 
@@ -132,6 +137,82 @@ header div > a{
 
 /* Set up practice section */
 
+.practice{
+    display: flex;                  /* Enable flexbox layout  */
+    justify-content: flex-start;    /* Align content to the top */
+    flex-direction: column;
+}
+
+.practice > .imgcontainer > img{
+    max-width: 100%;
+    height: auto;
+}
+
+.practice > .practice-text{
+    padding: 0 1.5rem;
+}
+
+.practice > .practice-text > h1{
+    font-size: xx-large;
+    margin-bottom: 1.5rem;
+}
+
+.practice > .practice-text > p{
+    font-size: small;
+    font-weight: lighter;
+}
+
+.practice > .practice-text > p > span{
+    display: block;
+    margin: auto;
+    font-weight: bold;
+    padding: 2rem 0;
+}
+
+/* Set up events section */
+
+.events{
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    border-left: 1px solid #e7e7e7;
+
+}
+
+.events .events-block:first-child{
+    padding-top: 2rem;
+}
+
+.events .events-block{
+    display: grid;
+    grid-template-columns: 0.35fr 0.65fr;
+    align-items: center;
+    border-bottom: 1px solid #e7e7e7;
+    padding: 1rem;
+}
+
+.events img{
+    width: 100%;
+    height: auto;
+}
+
+.events .events-text{
+    margin-left: 1rem;
+    height: 100%;
+    align-content: center;
+}
+
+.events .events-text h3{
+    font-size: large;
+}
+
+.events .events-text p{
+    font-size: small;
+}
+
+.events .events-text a{
+    font-size: small;
+    color: #3434c6;
+}
 
 /* Hide events mobile */
 
