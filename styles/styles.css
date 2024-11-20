@@ -5,7 +5,7 @@
 *{
   margin: 0;
   padding: 0;
-    outline: 1px dashed #ddd;
+    /* outline: 1px dashed #ddd; */
 }
 
 html{
@@ -16,6 +16,8 @@ html{
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #fff;
+    /* max-width: 50dvw; */
+    margin: auto;
 }
 a{
     text-decoration: none;
@@ -91,21 +93,28 @@ nav > a{
 
 /* Set up header area */
 header{
-    background-color: #d8d8d8;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d8d8d8;
 }
 
-header img{
-    width: 100%;
-    margin: 2rem 1.5rem;
+.imgcontainer{
+    padding: 2rem 1.5rem;
+}
+
+header > img{
+    max-width: 100%;
+    height: auto; /* set image to maintain proportionality, and the max width img can take without going out of proportion */
     /* TODO: to center the image within header */
 }
 
 header > div{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 1.5rem;
+    flex-direction: column; /* set content in a single column */
+    justify-content: space-evenly;
+    height: 18rem; /* adj the height of the whole text container */
+    padding-right: 2rem;    /* created right padding for right header */
 }
 
 header div > h1{
@@ -114,6 +123,9 @@ header div > h1{
 
 header div > h2{
     font-size: large;
+    /* padding-top: 2rem; */
+    /* padding-bottom: 2rem; */
+    padding: 2rem 0;
 }
 
 header div > a{
@@ -130,6 +142,109 @@ header div > a{
 
 /* Set up practice section */
 
+.practice{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+} 
+
+.practice > .imgcontainer > img{
+    max-width: 100%;
+    height: auto;
+    
+}
+
+.practice > .practice-text{ /* no > cus it will target everything inside that class if no '>' */
+    padding: 0 1.5rem;
+}
+
+.practice > .practice-text > h1{
+    font-size: xx-large;
+    margin-bottom: 1.5rem;
+}
+
+.practice > .practice-text > p{
+    font-size: small;
+    font-weight: lighter;
+}
+
+.practice > .practice-text > p > span{
+    display: block;
+    margin: auto;
+    font-weight: bold;
+    padding: 2rem 0;
+}
+
+/* Set up events section */
+
+.events{
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    border-left: 1px solid #e7e7e7;
+    padding-top: 2rem;
+}
+
+.events .events-block:first-child{
+    padding-top: 2rem;
+}
+
+.events .events-block{
+    display: grid;
+    grid-template-columns: 0.35fr 0.65fr;
+    align-items: center;
+    border-bottom: 1px solid #e7e7e7;
+    padding: 1rem;
+}
+
+.events img{
+    width: 100%;
+    height: auto;
+} 
+
+.events .events-text{
+    margin-left: 1rem; 
+    /* border: 1px solid black; (its just to create a box to show you the text box*/
+    height: 100%; 
+    align-content: center;
+} 
+
+.events .events-text h3{
+    font-size: large;
+}
+
+.events .events-text p{
+    font-size: small;
+}
+
+.events .events-text a{
+    font-size: small;
+    color: rgb(20, 60, 237);
+}
+
+/* set up footer */
+
+footer{
+    font-size: 0.8rem;
+    display: flex;
+    grid-column: full-start / full-end;
+    justify-content: space-between;
+    border-top: 1px solid #e7e7e7;
+    padding: 1rem 1.5rem 2rem;
+}
+
+footer > ul{
+    list-style: none;
+    display: flex;
+    }
+
+    footer > ul > li{
+        margin-right: 0.5rem;
+
+    }
+
+    footer > ul > li > a{
+        color: #3434c6;        
+    }
 
 /* Hide events mobile */
 
