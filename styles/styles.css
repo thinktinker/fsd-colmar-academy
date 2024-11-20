@@ -112,6 +112,7 @@ header > div{
     flex-direction: column;         /* Set content in a single column*/
     justify-content: space-evenly;  /* Center content horizontally */
     height: 18rem;                  /* Adjust desired height of container */
+    padding-right: 2rem;            /* Created a right padding for right header */
 }
 
 header div > h1{
@@ -212,6 +213,34 @@ header div > a{
 .events .events-text a{
     font-size: small;
     color: #3434c6;
+}
+
+/* Set up footer */
+
+footer{
+    font-size: 0.8rem;
+    display: flex;
+    grid-column: full-start / full-end;
+    justify-content: space-between;
+    border-top: 1px solid #e7e7e7;
+    padding: 1rem 1.5rem 2rem;
+}
+
+footer > ul{
+    list-style: none;
+    display: flex;
+}
+
+footer > ul > li{
+    margin-right: 0.5rem;
+}
+
+footer > ul > li > a{
+    color: #3434c6;
+}
+
+footer > ul > li > a:visited{
+    color: #f00;
 }
 
 /* Hide events mobile */
