@@ -243,6 +243,11 @@ footer > ul > li > a:hover{
     text-decoration: underline;
 }
 
+/* Hide nav for mobile */
+#nav-mobile{
+    display: none;
+}
+
 /* Hide events mobile */
 
 
@@ -258,6 +263,41 @@ footer > ul > li > a:hover{
 /* if the width of screen is 640px and below (aka 40rem x 16px) */
 @media screen and (max-width: 40rem ) {
     
+    /* Hide the desktop <nav> */
+    nav{
+        display: none;
+    }
+
+    /* Display mobile nav */
+    #nav-mobile{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        grid-column: full-start/full-end;
+        height: 4rem;
+    }
+
+    /* Set the header image to take up the entire viewport width */
+    header{
+        display: grid;
+        grid-column: full-start/full-end;
+    }
+
+    .imgcontainer{
+        padding: 0;
+    }
+
+    header > div{
+        display: block;
+        width: auto;
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    header > div > h2{
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
 
 }
 
