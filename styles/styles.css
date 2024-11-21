@@ -191,26 +191,26 @@ header div > a{
     padding: 1rem;
 }
 
-.events img{
+.events > .events-block > .events-img-desktop{
     width: 100%;
     height: auto;
 }
 
-.events .events-text{
+.events > .events-block > .events-text{
     margin-left: 1rem;
     height: 100%;
     align-content: center;
 }
 
-.events .events-text h3{
+.events > .events-block > .events-text h3{
     font-size: large;
 }
 
-.events .events-text p{
+.events > .events-block > .events-text p{
     font-size: small;
 }
 
-.events .events-text a{
+.events > .events-block > .events-text a{
     font-size: small;
     color: #3434c6;
 }
@@ -248,8 +248,10 @@ footer > ul > li > a:hover{
     display: none;
 }
 
-/* Hide events mobile */
-
+/* Hide events mobile img */
+.events > .events-block > .events-img-mobile{
+    display: none;
+}
 
 /** ********************** **/
 /** End of Desktop Section **/
@@ -263,8 +265,8 @@ footer > ul > li > a:hover{
 /* if the width of screen is 640px and below (aka 40rem x 16px) */
 @media screen and (max-width: 40rem ) {
     
-    /* Hide the desktop <nav> */
-    nav{
+    /* Hide the desktop <nav> and practice class */
+    nav, .practice{
         display: none;
     }
 
@@ -299,6 +301,51 @@ footer > ul > li > a:hover{
         margin-bottom: 1.5rem;
     }
 
+    /* Set up the events for mobile */
+    .events{
+        display: grid;
+        grid-column: full-start / full-end;
+        border-left: none;
+    }
+    
+    .events > .events-block{
+        display: flex;
+        flex-direction: column;
+        padding: 4rem 1rem 0 1rem;
+        border-bottom: none;
+    }
+
+    .events .events-block:first-child{
+        padding-top: 1rem;
+    }
+
+    .events .events-block:last-child{
+        padding-bottom: 2rem;
+    }
+
+    .events > .events-block > .events-img-desktop{
+        display: none;
+    }
+
+    .events > .events-block > .events-img-mobile{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .events > .events-block > .events-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 5rem;
+        margin-left: 1rem;
+    }
+
+    /* Set footer for mobile */
+    footer > ul{
+        display: none;
+    }
 }
 
 /* *********************** */
