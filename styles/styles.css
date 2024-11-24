@@ -5,7 +5,7 @@
 * {
   margin: 0;
   padding: 0;
-  /* outline: 1px dashed #000; */
+  outline: 1px dashed #000;
 }
 
 html {
@@ -226,14 +226,18 @@ header div > a {
     flex-direction: column; 
     align-items: center; 
     justify-content: center; 
-    border: 2px solid #000;
     padding: 20px;}
 
 /* end of learning cards */
 
 /* set up learning section and showcase container*/
 
+[name="learning"]{
+  color: #eaebec;
+}
+
 .start-learning {
+  text-align: center;
   font-size: xx-large;
   font-weight: bold;
   margin: 2rem;
@@ -248,6 +252,8 @@ header div > a {
 }
 
 .coursescontainer {
+  max-width: 100%;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -256,6 +262,78 @@ header div > a {
 }
 
 /* end of learning section and showcase container */
+
+/* set up thesis exhibit video section */
+
+.thesis {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.thesis > .videocontainer > video {
+  max-width: 100%;
+  height: auto;
+}
+
+.thesis > .thesis-video-text {
+  /* no > cus it will target everything inside that class if no '>' */
+  padding: 0 1.5rem;
+}
+
+.thesis > .thesis-video-text > h1 {
+  font-size: xx-large;
+  margin-bottom: 1.5rem;
+}
+
+.thesis > .thesis-video-text > p {
+  font-size: small;
+  font-weight: lighter;
+}
+
+/* end of thesis video */
+
+/* set up thesis exhibit */
+
+.thesis-exhibit {
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  border-left: 1px solid #e7e7e7;
+  padding-top: 2rem;
+}
+
+.thesis-exhibit .thesis-block:first-child {
+  padding-top: 2rem;
+}
+
+.thesis-exhibit .thesis-block {
+  display: grid;
+  grid-template-columns: 0.35fr 0.65fr;
+  align-items: center;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 1rem;
+}
+
+.thesis > .thesis-block > .thesis-img-desktop {
+  width: 100%;
+  height: auto;
+}
+
+.thesis > .thesis-block > .thesis-text {
+  margin-left: 1rem;
+  /* border: 1px solid black; (its just to create a box to show you the text box*/
+  height: 100%;
+  align-content: center;
+}
+
+.thesis > .thesis-block > .thesis-text h3 {
+  font-size: large;
+}
+
+.thesis > .thesis-block > .thesis-text p {
+  font-size: small;
+}
+
 
 /* set up footer */
 
