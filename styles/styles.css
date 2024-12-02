@@ -2,6 +2,33 @@
 
 /* Reset CSS */
 /* Universal selector (*) targets every element (regardless tag, class, ID) */
+* {
+  margin: 0;
+  padding: 0;
+  /* outline: 1px dashed #000; */
+}
+
+html {
+  font-size: 16px; /* reminder: 1 rem = 16px */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  /* max-width: 50dvw; */
+  margin: auto;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: [full-start] 0.6fr [center-end center-start] 0.4fr [full-end];
+  grid-template-rows: repeat(6, min-content);
+}
 
 /* TODO */
 
@@ -9,29 +36,342 @@
 /** ************************ **/
 
 /* Set up the navbar for the desktop */
+nav {
+  display: flex;
+  grid-column: full-start / full-end;
+  background-color: #fff;
+  justify-content: space-between;
+  height: 4rem;
+}
 
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  align-content: center;
+  padding-right: 1rem;
+}
+
+nav ul li:last-child {
+  padding-right: 1.5rem;
+}
+
+nav ul li a {
+  font-size: 0.75rem;
+}
+
+nav > a {
+  display: flex;
+  align-items: center;
+}
 
 /* Set up logo styles */
+.logo {
+  height: 3rem;
+  padding: 1.5rem;
+}
 
+.logoname {
+  text-transform: uppercase;
+  line-height: 2rem;
+}
+
+.logoname-bold {
+  font-weight: bold;
+  color: #484848;
+}
+
+.logoname-light {
+  font-weight: lighter;
+  color: #aaa;
+}
 
 /* Set up navigation links' styles */
 
-
 /* Set up header area */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d8d8d8;
+}
 
+.imgcontainer {
+  padding: 2rem 1.5rem;
+}
+
+header > img {
+  max-width: 100%;
+  height: auto; /* set image to maintain proportionality, and the max width img can take without going out of proportion */
+  /* TODO: to center the image within header */
+}
+
+header > div {
+  display: flex;
+  flex-direction: column; /* set content in a single column */
+  justify-content: space-evenly;
+  height: 18rem; /* adj the height of the whole text container */
+  padding-right: 2rem; /* created right padding for right header */
+}
+
+header div > h1 {
+  font-size: xx-large;
+}
+
+header div > h2 {
+  font-size: large;
+  /* padding-top: 2rem; */
+  /* padding-bottom: 2rem; */
+  padding: 2rem 0;
+}
+
+header div > a {
+  display: block;
+  width: 100%;
+  background-color: #484848aa; /* can put add'l AA/FF at the end to control the transparency*/
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem 0; /* only need to give value to top n bottom*/
+}
 
 /* hover effect for call to action link */
 
-
 /* Set up practice section */
 
+.practice {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.practice > .imgcontainer > img {
+  max-width: 100%;
+  height: auto;
+}
+
+.practice > .practice-text {
+  /* no > cus it will target everything inside that class if no '>' */
+  padding: 0 1.5rem;
+}
+
+.practice > .practice-text > h1 {
+  font-size: xx-large;
+  margin-bottom: 1.5rem;
+}
+
+.practice > .practice-text > p {
+  font-size: small;
+  font-weight: lighter;
+}
+
+.practice > .practice-text > p > span {
+  display: block;
+  margin: auto;
+  font-weight: bold;
+  padding: 2rem 0;
+}
+
+/* Set up events section */
+
+.events {
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  border-left: 1px solid #e7e7e7;
+  padding-top: 2rem;
+}
+
+.events .events-block:first-child {
+  padding-top: 2rem;
+}
+
+.events .events-block {
+  display: grid;
+  grid-template-columns: 0.35fr 0.65fr;
+  align-items: center;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 1rem;
+}
+
+.events > .events-block > .events-img-desktop {
+  width: 100%;
+  height: auto;
+}
+
+.events > .events-block > .events-text {
+  margin-left: 1rem;
+  /* border: 1px solid black; (its just to create a box to show you the text box*/
+  height: 100%;
+  align-content: center;
+}
+
+.events > .events-block > .events-text h3 {
+  font-size: large;
+}
+
+.events > .events-block > .events-text p {
+  font-size: small;
+}
+
+.events > .events-block > .events-text a {
+  font-size: small;
+  color: rgb(20, 60, 237);
+}
+
+/* set up learning cards */
+
+.learning-card{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 20px;}
+
+/* end of learning cards */
+
+/* set up learning section and showcase container*/
+
+[name="learning"]{
+  color: #eaebec;
+}
+
+.start-learning {
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bold;
+  margin: 2rem;
+}
+
+#learning-section {
+  width: 100%;
+  margin: 0 auto;
+  grid-column: full-start/full-end;
+  padding-bottom: 2rem;
+  height: 20rem;
+}
+
+.coursescontainer {
+  max-width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center; 
+  gap: 2rem;
+}
+
+/* end of learning section and showcase container */
+
+/* set up thesis exhibit video section */
+
+.thesis {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.thesis > .videocontainer > video {
+  max-width: 100%;
+  height: auto;
+}
+
+.thesis > .thesis-video-text {
+  /* no > cus it will target everything inside that class if no '>' */
+  padding: 0 1.5rem;
+}
+
+.thesis > .thesis-video-text > h1 {
+  font-size: xx-large;
+  margin-bottom: 1.5rem;
+}
+
+.thesis > .thesis-video-text > p {
+  font-size: small;
+  font-weight: lighter;
+}
+
+/* end of thesis video */
+
+/* set up thesis exhibit */
+
+.thesis-exhibit {
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  border-left: 1px solid #e7e7e7;
+  padding-top: 2rem;
+}
+
+.thesis-exhibit .thesis-block:first-child {
+  padding-top: 2rem;
+}
+
+.thesis-exhibit .thesis-block {
+  display: grid;
+  grid-template-columns: 0.35fr 0.65fr;
+  align-items: center;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 1rem;
+}
+
+.thesis > .thesis-block > .thesis-img-desktop {
+  width: 100%;
+  height: auto;
+}
+
+.thesis > .thesis-block > .thesis-text {
+  margin-left: 1rem;
+  /* border: 1px solid black; (its just to create a box to show you the text box*/
+  height: 100%;
+  align-content: center;
+}
+
+.thesis > .thesis-block > .thesis-text h3 {
+  font-size: large;
+}
+
+.thesis > .thesis-block > .thesis-text p {
+  font-size: small;
+}
+
+
+/* set up footer */
+
+footer {
+  font-size: 0.8rem;
+  display: flex;
+  grid-column: full-start / full-end;
+  justify-content: space-between;
+  border-top: 1px solid #e7e7e7;
+  padding: 1rem 1.5rem 2rem;
+  margin: 100% auto;
+}
+
+footer > ul {
+  list-style: none;
+  display: flex;
+}
+
+footer > ul > li {
+  margin-right: 0.5rem;
+}
+
+footer > ul > li > a {
+  color: #3434c6;
+}
+
+/* hide mobile navigation */
+#nav-mobile {
+  display: none;
+}
 
 /* Hide events mobile */
-
+.events > .events-block > .events-img-mobile {
+  display: none;
+}
 
 /** ********************** **/
 /** End of Desktop Section **/
-
 
 /* TODO */
 
@@ -39,10 +379,91 @@
 /** *********************** **/
 
 /* if the width of screen is 640px and below (aka 40rem x 16px) */
-@media screen and (max-width: 40rem ) {
-    
+@media screen and (max-width: 40rem) {
+  /* hide the desktop <nav> and practice class */
+  nav,
+  .practice {
+    display: none;
+  }
 
+  /* display mobile navigation */
+  #nav-mobile {
+    /* display: block; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    grid-column: full-start/full-end;
+    height: 4rem;
+  }
+
+  /* set the header image to consume the full space/take up entire viewport width */
+  header {
+    display: grid;
+    grid-column: full-start/full-end;
+  }
+
+  .imgcontainer {
+    padding: 0;
+  }
+
+  header > div {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 2rem 1rem;
+  }
+
+  header > div > h2 {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* set up events for mobile */
+
+  .events {
+    display: grid;
+    grid-column: full-start / full-end;
+  }
+
+  .events > .events-block {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 1rem 0 1rem;
+    border-bottom: none;
+  }
+
+  .events .events-block:first-child {
+    padding-top: 1rem;
+  }
+
+  .events .events-block:last-child {
+    padding-bottom: 2rem;
+  }
+
+  .events > .events-block > .events-img-desktop {
+    display: none;
+  }
+
+  .events > .events-block > .events-img-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .events > .events-block > .events-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 5rem;
+    margin-left: 1rem;
+  }
+
+  /* set footer for mobile */
+  footer > ul {
+    display: none;
+  }
 }
-
 /* *********************** */
 /** End of Mobile Section **/

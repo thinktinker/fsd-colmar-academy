@@ -4,60 +4,261 @@
     <meta charset="UTF-8">
     <!-- TODO -->
     <!-- The meta tag sets the page's viewport to be mobile-friendly -->
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colmar Academy</title>
     <!-- TODO -->
     <!-- Incorporate external css styles here -->
-
+<link rel="stylesheet" href="styles/styles.css">
 </head>
-<body>
+<body class="container">
     
     <!-- TODO -->
     <!-- 1. Start of Navbar -->
-
+    <nav>
+        <a href="#">
+            <img class="logo" src="assets/images/ic-logo.svg" alt="Colmar Academy Logo">
+            <span class="logoname logoname-bold">Colmar</span>
+            <span class="logoname logoname-light">Academy</span>
+        </a>
+        <ul>
+            <li><a href="#">Our Campus</a></li>
+            <li><a href="#">Online</a></li>
+            <li><a href="#">Our Companies</a></li>
+            <li><a href="#">Sign-In</a></li>
+        </ul>
+    </nav>
 
     <!-- End of Navbar -->
+
+    <!-- TODO -->
+     <!-- start of navbar for mobile -->
+    <nav id="nav-mobile">
+        <a href="#"><img src="assets/images/ic-logo.svg" alt="Mobile Logo Home"></a>
+
+        <a href="#"><img src="assets/images/ic-on-campus.svg" alt="Mobile Logo campus"></a>
+
+        <a href="#"><img src="assets/images/ic-online.svg" alt="Mobile Logo Online"></a>
+
+        <a href="#"><img src="assets/images/ic-login.svg" alt="Mobile Logo ic-login"></a>
+        </nav>
+     <!-- end of navbar for mobile -->
 
 
     <!-- TODO -->
     <!-- 2.  Start of header -->
+    <header class="imgcontainer">
+        <img src="assets/images/banner.jpg" alt="pic of banner">
+    </header>
 
+    <header>
+        <div>
+            <h1>
+                Learn Something New Everyday
+            </h1>
+            <h2>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </h2>
+            <a href="">
+                Start Here
+            </a>
+        </div>
+    </header>
 
     <!-- End of header -->
 
 
     <!-- TODO -->
     <!-- 3. Start of practice -->
-    
+    <section class="practice">
+        <div class="imgcontainer">
+        <img src="assets/images/information-main.jpg" alt="Practice Banner">
+        </div>
+        <div class="practice-text">
+        <h1>It doesn't hurt to keep practicing</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam porro quia fugit optio itaque, excepturi dicta. Magnam quis sint ipsa?
+        <span>Emmanuel, Sr Strategist at Hiring.com</span>
+        </p> 
+        </div>
+    </section>
 
     <!-- End of practice -->
 
 
     <!-- TODO -->
     <!-- 3.1. Start of events -->
-    
+    <section class="events">
 
+            <div class="events-block">
+
+                <img class="events-img-desktop" src="assets/images/information-orientation.jpg" alt="Orientation Event Image">
+                <img class="events-img-mobile" src="assets/images/information-orientation-mobile.jpg" alt="Orientation Event Image">
+
+                <div class="events-text">
+                    <h3>Orientation Date</h3>
+                    <p>Tues 10/11 & Wed 10/12: 8am-3pm</p>
+                    <a href="">Read more</a>
+                </div>
+            </div>
+
+            <div class="events-block">
+
+                <img class="events-img-desktop" src="assets/images/information-campus.jpg" alt="Information Campus Image">
+                <img class="events-img-mobile" src="assets/images/information-campus-mobile.jpg" alt="Information Campus Image">
+
+                <div class="events-text">
+                    <h3>Our Campus</h3>
+                    <p>Find which campus is close by you</p>
+                    <a href="">Read more</a>
+                </div>
+
+            </div>
+
+            
+            <div class="events-block">
+
+                <img class="events-img-desktop" src="assets/images/information-guest-lecture.jpg" alt="Guest Lecture Image">
+                <img class="events-img-mobile" src="assets/images/information-guest-lecture-mobile.jpg" alt="Guest Lecture Image">
+
+                <div class="events-text">
+                    <h3>Our Guest Lecture</h3>
+                    <p>Join a keynote with Oliver Sack about music in medical treatment</p>
+                    <a href="">Read more</a>
+                </div>
+            </div>
+
+    </section>
     <!-- End of events -->
 
 
     <!-- TODO -->
-    <!-- 4. Start of learning -->
+    <!-- 4. Start of learning, using grids -->
+     <a name="learning"></a>
+    <section id="learning-section">  
+
+   <div class="start-learning">
+   Start Learning
+   </div>
 
 
+   <div class="coursescontainer">
+
+<!-- learning cards go here -->
+    <!-- learning card no.1 -->
+    <div class="learning-card">
+        <a href="#">
+            <img class="learning-img-desktop" src="assets/images/course-software.jpg" alt="picture of software eng">
+            <!-- Learning name -->
+            <h1 class="learningh1">Software Engineering</h1>
+            <p>COURSES</p>
+            <p>Web Development, Mobile Development, iOT, APIs</p>
+        </a>
+    </div>
+    <!-- learning card no.2 -->
+    <div class="learning-card">
+        <a href="#">
+            <img class="learning-img-desktop" src="assets/images/course-computer-art.jpg" alt="picture of computer art">
+            <!-- Learning name -->
+            <h1>Computer Art</h1>
+            <p>COURSES</p>
+            <p>Image & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
+        </a>
+    </div>
+    <!-- learning card no.3 -->
+    <div class="learning-card">
+        <a href="#">
+            <img class="learning-img-desktop" src="assets/images/course-design.jpg" alt="picture of design">
+            <!-- Learning name -->
+            <h1>Design</h1>
+            <p>COURSES</p>
+            <p>User Experience Design, User Research, Visual Design</p>
+        </a>
+    </div>
+    <!-- learning card no.4 -->
+    <div class="learning-card">
+        <a href="#">
+            <img class="learning-img-desktop" src="assets/images/course-data.jpg" alt="picture of data">
+            <!-- Learning name -->
+            <h1>Data</h1>
+            <p>COURSES</p>
+            <p>Data Science, Big Data, SQL, Data Visualization</p>
+        </a>
+    </div>
+    <!-- learning card no.5 -->
+    <div class="learning-card">
+        <a href="#">
+            <img class="learning-img-desktop" src="assets/images/course-business.jpg" alt="picture of business">
+            <!-- Learning name -->
+            <h1>Business</h1>
+            <p>COURSES</p>
+            <p>Product Development, Business Development, Startup</p>
+        </a>
+    </div>
+    <!-- learning card no.6 -->
+    <div class="learning-card">
+        <a href="#">
+            <img class="learning-img-desktop" src="assets/images/course-marketing.jpg" alt="picture of marketing">
+            <!-- Learning name -->
+            <h1>Marketing</h1>
+            <p>COURSES</p>
+            <p>Analytics, Content Marketing, Mobile Marketing</p>
+        </a>
+    </div> 
+
+    </div>
+
+    </section>
     <!-- End of learning -->
 
 
     <!-- TODO -->
-    <!-- 5. Star of thesis -->
+    <!-- 5. Start of thesis video -->
+
+    <section class="thesis">
+        <div class="videocontainer">
+        <video src="assets/videos/thesis.mp4"></video>        
+        </div>
+        <div class="thesis-video-text">
+        <h1>Reimagine Urban</h1>
+        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat nulla quidem voluptate, officiis laboriosam sapiente rem mollitia explicabo vero consectetur, facilis neque sunt dignissimos deserunt a incidunt enim. Doloribus!"
+        </p> 
+        </div>
+    </section>
+
+    <!-- End of thesis video -->
+
+    <!-- start of thesis exhibit -->
+     
+    <section class="thesis-exhibit">
+
+        <div class="thesis-block">
+            <img class="thesis-img-desktop" src="assets/images/thesis-fisma.jpg" alt="pic of fisma design prototype">
+            <div class="thesis-text">
+                <h3>Fisma: Design and Prototype</h3>
+                <p>Designer showcase of new prototype Product</p>
+            </div>
+        </div>
+
+        <div class="thesis-block">
+            <img class="thesis-img-desktop" src="assets/images/thesis-now-and-then.jpg" alt="pic of now and then">
+            <div class="thesis-text">
+                <h3>Now and then</h3>
+                <p>Research study about New York</p>
+            </div>
+        </div>
 
 
-    <!-- End of thesis -->
+    <!-- end of thesis exhibit -->
 
 
     <!-- TODO -->
     <!-- 6. Start of footer -->
-
-
+    <footer>
+        <p>&copy; 2024 Colmar Academy. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+            </ul>
+    </footer>
     <!-- End of footer -->
 
 </body>
